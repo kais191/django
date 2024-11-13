@@ -1,25 +1,2 @@
-* text=auto
-
-
-# Ignore Python cache files
-__pycache__/
-*.py[cod]
-
-# Ignore SQLite database
-*.sqlite3
-
-# Ignore environment files
-.env
-
-# Ignore virtual environment folder
 venv/
-
-# Ignore static and media files in production
-/staticfiles/
-media/
-
-# Ignore IDE files
-.vscode/
-.idea/
-
-
+.venv/
