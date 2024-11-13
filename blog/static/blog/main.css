@@ -1,0 +1,504 @@
+body {
+    background: #cbcaca;
+    color: #313030;
+    margin-top: 5rem;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    animation: bgGradientShift 70s ease-in-out infinite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #444444;
+}
+
+ul {
+    margin: 0;
+}
+
+.bg-steel {
+    background-color: #3f5b6f;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    color: #444444;
+}
+
+a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.article-content {
+    white-space: pre-line;
+}
+
+.article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+}
+
+.article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+/* Styling the container */
+.content-section {
+    background: #ffffff; /* White background for contrast */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 50px 30px; /* More padding for breathing space */
+    margin-bottom: 40px; /* Space below the container */
+    max-width: 500px;
+    margin-top: 100px;
+}
+
+/* Legend styling */
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333333;
+    background-color: #fafafa;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #428bca;
+    box-shadow: 0 0 5px rgba(66, 139, 202, 0.5);
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #428bca;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3071a9;
+}
+
+/* Link styling */
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Small text styling */
+.text-muted {
+    color: #777777;
+    font-size: 0.875em;
+}
+
+/* Additional padding for bottom spacing */
+.border-top {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+
+/* Hide the original file input */
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
+/* Style the custom file upload button */
+.custom-file-upload {
+    display: inline-block;
+    background-color: #007bff; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #007bff; /* Darker color on hover */
+}
+
+/* Optional: Add some margin between file input and other form fields */
+.file-input-wrapper {
+    margin-bottom: 15px;
+}
+
+
+
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.user-message {
+    background-color: #f1f0f0;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #e0f7fa;
+    text-align: left;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.delete-btn {
+    margin-left: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+
+/* Parent container for chat messages */
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between messages */
+    padding: 10px;
+    overflow-y: auto; /* Enables scrolling if messages overflow */
+    max-height: 400px; /* Adjust as needed */
+}
+
+/* Each chat message */
+.chat-message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* Animation */
+}
+
+/* User message (right-aligned) */
+.user-message {
+    background-color: #007aff; /* iOS blue */
+    color: white;
+    align-self: flex-end; /* Aligns to the right */
+    text-align: right;
+}
+
+/* Bot message (left-aligned) */
+.bot-message {
+    background-color: #e5e5ea; /* iOS light gray */
+    color: black;
+    align-self: flex-start; /* Aligns to the left */
+    text-align: left;
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: Tail on chat bubbles */
+.user-message::after,
+.bot-message::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.user-message::after {
+    right: -10px;
+    border-width: 27px 5px 27px 17px;
+    border-color: transparent transparent transparent #007aff;
+}
+
+.bot-message::after {
+    left: -10px;
+    border-width: 20px 20px 22px 3px;
+    border-color: transparent #e5e5ea transparent transparent;
+    
+}
+
+
+
+
+
+
+
+/* Sidebar styling for desktop view */
+.favorites-section-desktop {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 499px;
+    z-index: 1000;
+}
+
+/* Link styling within the favorites list */
+.list-group-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.list-group-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Hide the desktop sidebar on screens narrower than 768px */
+@media (max-width: 767px) {
+    .favorites-section-desktop {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Minimalist base styling for background */
+
+
+/* Logo base styling */
+.km-logo {
+    font-size: 2rem; /* Smaller size for subtlety */
+    font-weight: bold;
+    color: #1f2933;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for individual letters */
+.km-logo .letter {
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    font-size: 1.2em; /* Smaller font size for subtle effect */
+    animation: popIn 1.2s ease-out forwards, gentleWave 5s ease-in-out infinite;
+}
+
+/* Soft glow and fading effect */
+.km-logo .letter-k {
+    color: #FF6B6B;
+    animation-delay: 0.3s;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.4);
+}
+
+.km-logo .letter-m {
+    color: #4ECDC4;
+    animation-delay: 0.6s;
+    box-shadow: 0 0 8px rgba(78, 205, 196, 0.4);
+}
+
+/* Ampersand styling with a simple fade-in */
+.km-logo .ampersand {
+    color: #1f2933;
+    opacity: 0;
+    animation: fadeInAmpersand 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Pop-in animation with subtle ripple effect */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gentle wave motion for subtle floating effect */
+@keyframes gentleWave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Fading trail effect */
+.km-logo .letter::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+    animation: fadeTrail 2s ease-out infinite;
+}
+
+@keyframes fadeTrail {
+    0% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Fade-in for ampersand (&) */
+@keyframes fadeInAmpersand {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}

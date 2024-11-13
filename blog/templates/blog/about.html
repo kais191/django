@@ -1,0 +1,90 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="chat-container">
+    <div id="chat-box" class="chat-box">
+        <!-- Messages will be dynamically appended here -->
+    </div>
+    
+    <div class="chat-input">
+        <input type="text" id="user-message" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    function sendMessage() {
+        const messageBox = document.getElementById("user-message");
+        const message = messageBox.value;
+        
+        if (message.trim() === "") return;  // Ignore empty messages
+    
+        // Display user's message
+        const chatBox = document.getElementById("chat-box");
+        const userMessageDiv = document.createElement("div");
+        userMessageDiv.className = "chat-message user-message";
+        userMessageDiv.textContent = message;
+        const deleteButton = document.createElement("button"); // Create delete button
+        deleteButton.className = "delete-btn"; // Optional: style with CSS
+        deleteButton.textContent = "Delete"; // Set button text
+        deleteButton.onclick = () => userMessageDiv.remove(); // Define delete action
+        userMessageDiv.appendChild(deleteButton); // Attach button to message div
+        chatBox.appendChild(userMessageDiv);
+        
+    
+        // Clear the input
+        messageBox.value = "";
+    
+        // Send message to Django backend
+        fetch("{% url 'chat_response' %}", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "X-CSRFToken": "{{ csrf_token }}"
+            },
+            body: new URLSearchParams({
+                "message": message
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display bot's response
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.className = "chat-message bot-message";
+            botMessageDiv.textContent = data.bot_response;
+            chatBox.appendChild(botMessageDiv);
+    
+            // Scroll to the bottom of the chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+        })
+        .catch(error => console.error("Error:", error));
+    }
+    function addDeleteButton(messageDiv) {
+    const deleteButton = document.createElement("span");
+    deleteButton.className = "delete-button";
+    deleteButton.textContent = "x";
+    deleteButton.onclick = () => {
+        // Apply fade-out animation before removing the message
+        messageDiv.style.animation = "fadeOut 0.3s ease";
+        messageDiv.addEventListener("animationend", () => {
+            messageDiv.remove();
+        });
+    };
+    messageDiv.appendChild(deleteButton);
+}
+
+
+
+    
+    
+</script>
+    
+{% endblock content %}
