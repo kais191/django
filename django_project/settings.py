@@ -1,4 +1,3 @@
-
 """
 Django settings for sample_project project.
 
@@ -12,22 +11,22 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'your-secret-key-here'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'True'
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
@@ -38,12 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-      'users',
-      'blog',
-      'crispy_forms',
-      'crispy_bootstrap4', 
-      
+    'users',
+    'blog',
+    'crispy_forms',
+    'crispy_bootstrap4', 
 ]
 
 MIDDLEWARE = [
@@ -80,16 +77,13 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangok',
-        'USER': 'postgres',
-        'PASSWORD': 'dasyBen1',
-        'HOST': 'localhost',
-        'PORT': '5432',}
-}
+database_url = os.environ.get("DATABASE_URL")
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgresql://djangok_user:zAg2pzBR2E9rHAQz0Ot3mbP2wlpXcV1L@dpg-csq1eaggph6c73cjr4hg-a.oregon-postgres.render.com/djangok'
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -109,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -123,27 +116,20 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "blog" / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 # Media files
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = '/profile/'
 
-
-
-
+# Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
