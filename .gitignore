@@ -1,2 +1,10 @@
 venv/
 .venv/
+ blog/__pycache__/
+        blog/migrations/__pycache__/
+        db.sqlite3
+        django_project/__pycache__/
+        media/
+        staticfiles/
+        users/__pycache__/
+        users/migrations/__pycache__/
