@@ -27,7 +27,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY","rdAkWzbkeRg-I5uFOxpyg3m7wKnrjbqyorz58V
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'True'
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "chat-dgqh.onrender.com").split(",")
+ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'localhost']
+
 
 
 
@@ -121,8 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "blog" / "static"]
+STATICFILES_DIRS = [BASE_DIR / "blog" / "static"]  # Adjust as needed
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 # Media files
 MEDIA_ROOT = BASE_DIR / 'media'

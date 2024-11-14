@@ -1,10 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
 venv/
-.venv/
- blog/__pycache__/
-        blog/migrations/__pycache__/
-        db.sqlite3
-        django_project/__pycache__/
-        media/
-        staticfiles/
-        users/__pycache__/
-        users/migrations/__pycache__/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+*.log
+staticfiles/
+local_settings.py
+db.sqlite3
+
+
+media/
+
+
+*.manifest
+*.spec
+
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+.DS_Store
