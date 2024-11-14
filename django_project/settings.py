@@ -6,7 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "rdAkWzbkeRg-I5uFOxpyg3m7wKnrjbqyorz58VEbs0ZZTHz0D9ovXrZ7ggCxjKY0Tm4")
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
+
 
 
 ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'localhost']
