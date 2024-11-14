@@ -1,0 +1,186 @@
+[33mcommit e7cb12553f446c6c922e519f9166246c0c2afb90[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 18:24:18 2024 +0000
+
+    Cleaned up views, removed duplicates, and added login check for toggle_favorite
+
+[33mcommit 6d2f078f80c314a2e804f8502b93f29384dd018f[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 18:20:34 2024 +0000
+
+    Cleaned up views, removed duplicates, and added login check for toggle_favorite
+
+[33mcommit a2c393c20e2685061aca852d89fe0ff81ded8a9a[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 18:00:40 2024 +0000
+
+    Describe the changes made, e.g., 'Fix profile image upload and settings updates'
+
+[33mcommit c1637090c0464e7555d652d91cfbe49f3f08e9ca[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 17:34:04 2024 +0000
+
+    Add login required decorator to toggle_favorite function to prevent anonymous access
+
+[33mcommit 620a2c30cec846e37ca7df24d2d5d8ba3f76faba[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 17:23:34 2024 +0000
+
+    Resolve merge conflicts
+
+[33mcommit 137eeee0f707e6da70081e35a1d85ea4c6b9c4fc[m
+Merge: 80e27f4 cfb6e67
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 17:11:15 2024 +0000
+
+    Resolve merge conflicts
+
+[33mcommit 80e27f4018ad52de3f1cf3f3ff54ab5583a39240[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 17:07:36 2024 +0000
+
+    Add login required decorator to toggle_favorite function to prevent anonymous access
+
+[33mcommit cfb6e676df404bc7c6f73c04ec77a5b70c5ffcb8[m
+Author: kais191 <152333720+kais191@users.noreply.github.com>
+Date:   Thu Nov 14 04:17:36 2024 +0000
+
+    Create README.md
+
+[33mcommit d5fd56740e448e92a8f80ae1aad7f1c187ccb22f[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 03:48:18 2024 +0000
+
+    Updated models and applied migrations
+
+[33mcommit 10f7a437121d0d3f73672ac49e315018d860be89[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 03:38:58 2024 +0000
+
+    Updated models and applied migrations
+
+[33mcommit 799304b4fc8651a1668e28feed8df8bcfcb8baf7[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 03:33:54 2024 +0000
+
+    Updated models and applied migrations
+
+[33mcommit 152f650f44c664f369e12417bed8449bec0497fb[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 03:20:00 2024 +0000
+
+    Add fallback image for profile picture
+
+[33mcommit 5bbac6cc1c04f0c9c45a1b81581d93bceb966e5f[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 02:59:09 2024 +0000
+
+    Updated Post and Profile models
+
+[33mcommit aa0ccbc6545a50b19a8013a2fb267334e98f2347[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 02:45:26 2024 +0000
+
+    Updated Post and Profile models
+
+[33mcommit fc2cc7435c88612457775698d02afbbb3ba3b253[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 02:22:23 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit e8393eec2250d46246b6560668fc76118415a9fb[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 02:13:45 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit af6fb6b20f5d4dc730ec08e1c74d36631c2fdab0[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 02:09:31 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit b4f3db1e322ed7673daadee5cd5c2586fee3f5e8[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 01:55:42 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit eddf4f255974419d0dbf79ec6423bc339edf5cec[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 01:50:58 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit 687411b8a16db7a42ad0923063f162c2fd4f4292[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 01:44:19 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit 79f1f76e5e74c193fbdfb3c735d43d9333d39d76[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 01:37:00 2024 +0000
+
+    Updated Post model and applied migrations
+
+[33mcommit 486f8bcd1352e2cde28649c74429222b195779e3[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 00:58:27 2024 +0000
+
+    Add whitenoise to requirements
+
+[33mcommit 959c264fea0ba2aaa310794dcb41bd2e3f0dfb88[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 00:50:05 2024 +0000
+
+    Configure Whitenoise for static file handling and update settings
+
+[33mcommit fba523a85364dd09946beb3f4a71a5df803c66a4[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Thu Nov 14 00:04:10 2024 +0000
+
+    Update settings for static and media files configuration
+
+[33mcommit 1a779b64640a28473d717bf0191ad54df0dc7f6f[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 22:49:07 2024 +0000
+
+    Updated settings for static files and deployment configuration
+
+[33mcommit 1bdfd21dd9f0e206513882b43a9f38ddbfe63da7[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 22:39:01 2024 +0000
+
+    Add gunicorn to requirements and update Procfile for Render deployment
+
+[33mcommit fcc5ebbf71e77e82182446e3babb4a5a982923a8[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 22:23:12 2024 +0000
+
+    Add Procfile to run gunicorn
+
+[33mcommit bfee1bfef5e0dbbd769f23144befa691955db869[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 22:00:29 2024 +0000
+
+    Update settings.py to use default SECRET_KEY for testing
+
+[33mcommit dd618c54c93eafd8ba64a7772dc8e9333031470a[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 19:40:47 2024 +0000
+
+    Updated .gitignore to ignore virtual environments
+
+[33mcommit d32016116e07dc21bb6f17ea6f61a264a107c84e[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 19:23:54 2024 +0000
+
+    first commit
+
+[33mcommit f9230baa0ca2426324522d94a5fe172874055235[m
+Author: kais ben sadek <dasy.homar@gmail.com>
+Date:   Wed Nov 13 04:38:08 2024 +0000
+
+    django

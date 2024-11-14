@@ -1,0 +1,31 @@
+[33me7cb125[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Cleaned up views, removed duplicates, and added login check for toggle_favorite
+[33m6d2f078[m Cleaned up views, removed duplicates, and added login check for toggle_favorite
+[33ma2c393c[m Describe the changes made, e.g., 'Fix profile image upload and settings updates'
+[33mc163709[m Add login required decorator to toggle_favorite function to prevent anonymous access
+[33m620a2c3[m Resolve merge conflicts
+[33m137eeee[m Resolve merge conflicts
+[33m80e27f4[m Add login required decorator to toggle_favorite function to prevent anonymous access
+[33mcfb6e67[m Create README.md
+[33md5fd567[m Updated models and applied migrations
+[33m10f7a43[m Updated models and applied migrations
+[33m799304b[m Updated models and applied migrations
+[33m152f650[m Add fallback image for profile picture
+[33m5bbac6c[m Updated Post and Profile models
+[33maa0ccbc[m Updated Post and Profile models
+[33mfc2cc74[m Updated Post model and applied migrations
+[33me8393ee[m Updated Post model and applied migrations
+[33maf6fb6b[m Updated Post model and applied migrations
+[33mb4f3db1[m Updated Post model and applied migrations
+[33meddf4f2[m Updated Post model and applied migrations
+[33m687411b[m Updated Post model and applied migrations
+[33m79f1f76[m Updated Post model and applied migrations
+[33m486f8bc[m Add whitenoise to requirements
+[33m959c264[m Configure Whitenoise for static file handling and update settings
+[33mfba523a[m Update settings for static and media files configuration
+[33m1a779b6[m Updated settings for static files and deployment configuration
+[33m1bdfd21[m Add gunicorn to requirements and update Procfile for Render deployment
+[33mfcc5ebb[m Add Procfile to run gunicorn
+[33mbfee1bf[m Update settings.py to use default SECRET_KEY for testing
+[33mdd618c5[m[33m ([m[1;31morigin/master[m[33m)[m Updated .gitignore to ignore virtual environments
+[33md320161[m first commit
+[33mf9230ba[m django
