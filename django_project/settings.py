@@ -89,6 +89,9 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/profile/'
 
+LOGIN_URL = '/login/'  
+
+
 # Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
