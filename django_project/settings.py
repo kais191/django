@@ -9,6 +9,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "rdAkWzbkeRg-I5uFOxpyg3m7wKnrjbqyorz58
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://chat-dgqh.onrender.com']
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
