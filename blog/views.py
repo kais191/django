@@ -7,12 +7,13 @@ import random
 from .models import Post, Announcement, Event 
 from .models import Post
 from django.shortcuts import get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 
 
 
 
 
-
+@login_required
 def toggle_favorite(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     if request.user in post.favorites.all():
@@ -57,6 +58,7 @@ AUTO_RESPONSES = [
     "I’m here to assist you with any questions.",
     "Feel free to ask anything!",
     "I'm just an auto-responder, but I'll try my best!",
+    
 ]
 
 def about_view(request):
