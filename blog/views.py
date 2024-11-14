@@ -7,11 +7,12 @@ import random
 from .models import Post, Announcement, Event 
 from .models import Post
 from django.shortcuts import get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
 
 
 
-@login_required
+
+
+
 def toggle_favorite(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     if request.user in post.favorites.all():
@@ -19,11 +20,6 @@ def toggle_favorite(request, post_id):
     else:
         post.favorites.add(request.user)
     return redirect('blog-home')  # Or wherever you want to redirect
-
-
-
-
-
 
 
 
