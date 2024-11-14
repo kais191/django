@@ -11,9 +11,13 @@ class Profile(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the save method to resize profile images, if necessary.
+        Override the save method to ensure a default image path and resize profile images, if necessary.
         """
-        super().save(*args, **kwargs)
+        # Set a default image path if none is provided
+        if not self.image:
+            self.image = 'profile_pics/default.jpg'  # Adjust this path as needed
+
+        super().save(*args, **kwargs)  # Save the profile instance first
         
         # Optional resizing of the image
         img = Image.open(self.image.path)
@@ -21,5 +25,3 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
-
-            
