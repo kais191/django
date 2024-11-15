@@ -4,15 +4,14 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "rdAkWzbkeRg-I5uFOxpyg3m7wKnrjbqyorz58VEbs0ZZTHz0D9ovXrZ7ggCxjKY0Tm4")
+# Update to use RET_KEY
+SECRET_KEY = os.environ.get("RET_KEY", "fallback-secret-key")
 
-DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
-
-
+# Pull DEBUG value from environment and convert to Boolean
+DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://chat-dgqh.onrender.com']
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,12 +28,12 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # Ensure whitenoise is listed after SecurityMiddleware
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -60,7 +59,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://djangok_user:zAg2pzBR2E9rHAQz0Ot3mbP2wlpXcV1L@dpg-csq1eaggph6c73cjr4hg-a.oregon-postgres.render.com/djangok'
+        default=os.environ.get('DATABASE_URL')
     )
 }
 
@@ -79,20 +78,38 @@ USE_TZ = True
 
 # Static files settings
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "blog" / "static"]  # Adjust as needed
+STATICFILES_DIRS = [BASE_DIR / "blog" / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # Whitenoise static files compression
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Media files
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = '/profile/'
-
-LOGIN_URL = '/login/'  
-
+LOGIN_URL = '/login/'
 
 # Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'error.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
