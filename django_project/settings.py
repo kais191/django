@@ -10,7 +10,8 @@ SECRET_KEY = os.environ.get("RET_KEY", "fallback-secret-key")
 # Pull DEBUG value from environment and convert to Boolean
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'django-x7ba.onrender.com', 'localhost']
+
 CSRF_TRUSTED_ORIGINS = ['https://chat-dgqh.onrender.com']
 
 INSTALLED_APPS = [
