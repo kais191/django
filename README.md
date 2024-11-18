@@ -1,5 +1,5 @@
 https://chat-dgqh.onrender.com
-https://django-x7ba.onrender.com BACKUP
+
 
 
 #-  save method in Profile model
