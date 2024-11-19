@@ -12,7 +12,7 @@ DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['chat-dgqh.onrender.com', 'django-x7ba.onrender.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://chat-dgqh.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://django-x7ba.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
